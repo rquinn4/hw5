@@ -3,9 +3,10 @@ name = "phys305_hw5"
 version = "0.0.0"
 dependencies = [
     "numpy",
-    "scipy",
     "matplotlib",
     "corner",
     "tqdm",
+    "bilby",
+    "gwpy",
     "pytest",
 ]
