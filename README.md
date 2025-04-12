@@ -59,6 +59,25 @@ functions are correct and match the required interface.
 Use `pytest` to validate outputs and spot common mistakes.
 
 
+### **Assignment 1**: LIGO Data Loader (2 points)
+
+Implement the function
+`Interferometer(name, time_of_event, post_trigger_duration=2, duration=4, sample_rate=4096, maximum_frequency=1024)`
+that:
+* Downloads the strain data and PSD data using `gwpy`
+* Initializes a `bilby` interferometer object
+* Sets the strain data and PSD correctly for use in GW likelihood evaluations
+
+All the steps are provide after `Getting the data: GW150914` and
+before `Low dimensional analysis` in the Gravitational Wave Open Data
+Workshop tutorial notebook `demo/tutorial.ipynb`.
+All you need to do is to understand the steps and reorganize them into
+a function.
+
+You can check your implementation by plotting the strain and PSD in
+the visualization notebook `demo/vis.ipynb`.
+
+
 ## Additional Notes
 
 * **Collaboration**:
