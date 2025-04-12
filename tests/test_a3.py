@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from phys305_hw5 import *
 import numpy as np
 import pytest
