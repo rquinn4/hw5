@@ -186,6 +186,31 @@ How to Test It:
 * The debug notebook will run your `stat()` function after sampling.
 
 
+### Assignment 5: Full Gravitational Wave Inference Pipeline (5 points)
+
+In this final assignment, you will bring everything together into a
+full gravitational wave parameter inference pipeline.
+Your task is to implement the function: `main(time_of_event)`.
+This script should:
+1. Load real LIGO data
+2. Set up the prior
+3. Generate the waveform
+4. Evaluate the likelihood
+5. Run your custom MCMC sampler
+6. Print summary statistics and save a corner plot
+
+Key Tasks:
+* Note that all of the above steps are actually in the visualization
+  notebook `demo/vis.ipynb`!
+  This means you are just copying and rearranging a Jupyter Notebook
+  into a script.
+* The make the script executable, wrap the call in a `__main__` block
+  so students can run it from the command line:
+  ```
+  if __name__ == "__main__":
+    main(1126259462.4)
+  ```
+
 ## Additional Notes
 
 * **Collaboration**:
