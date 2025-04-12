@@ -39,14 +39,24 @@ maximize your score.
 
 ## Assignments
 
-To simplify debugging and to help you visualize your progress, a
-Jupyter notebook is provided at `demo/vis.ipynb`.
-This notebook demonstrates how the functions developed for each
-assignment interact and shows sample visualizations. Use the notebook
-alongside `pytest` to validate your code and to better understand the
-behavior of your implementations.
+To simplify debugging and help visualize your progress, a Jupyter
+notebook is provided at `demo/vis.ipynb`.
+This notebook walks you through the full inference pipeline for
+gravitational wave event GW150914 and helps verify that your code is
+producing the correct outputs at each stage.
 
+You can run the notebook interactively to:
+* Load LIGO data
+* Visualize frequency-domain strain and noise
+* Construct priors and waveforms
+* Evaluate likelihoods
+* Sample the posterior with your own MCMC code
+* Plot final parameter estimates
 
+Each Python file in `src/phys305_hw5/` corresponds to one assignment.
+The notebook will call your implementations directly, so ensure your
+functions are correct and match the required interface.
+Use `pytest` to validate outputs and spot common mistakes.
 
 
 ## Additional Notes
