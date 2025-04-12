@@ -155,6 +155,35 @@ Expected Output:
 You can check your implementation by running your `mcmc_sampler()` in
 the visualization notebook `demo/vis.ipynb`.
 
+### **Assignment 4**: Posterior Analysis and Visualization (2 points)
+
+In this assignment, you will implement a function to summarize and
+visualize the MCMC samples from your gravitational wave inference:
+`stat(samples, file=None)`.
+
+Inputs:
+* samples: A NumPy array of shape `(n_steps, n_parameters>=2)`
+  containing posterior samples for `chirp_mass` and `mass_ratio`,
+  returned by your MCMC sampler.
+* file (optional): A file name (e.g., 'corner.png') to save the corner
+  plot.
+  If the default None is used, the plot is not saved.
+
+Key Tasks:
+* Print Parameter Statistics:
+  For each parameter (chirp_mass and mass_ratio), compute median, 90%
+  credible interval (i.e., the 5th and 95th percentiles), and print
+  results like:
+  `median(chirp_mass) = 30.1 with a 90% C.I = 28.5 -> 31.7`.
+* Generate a Corner Plot:
+  Use the corner package to plot the 2D posterior distribution of the
+  two parameters.
+  Include marginal distributions, parameter labels, and quantile
+  markers (5%, 50%, 95%).
+* Optionally Save to File: if a file name is given, save the plot.
+
+How to Test It:
+* The debug notebook will run your `stat()` function after sampling.
 
 
 ## Additional Notes
