@@ -78,6 +78,42 @@ You can check your implementation by plotting the strain and PSD in
 the visualization notebook `demo/vis.ipynb`.
 
 
+### **Assignment 2**: Waveform Generator (2 points)
+
+In this assignment, you will implement the function
+`WaveformGenerator(duration, sampling_frequency, start_time)`.
+This function returns a `bilby.gw.WaveformGenerator` object configured
+to simulate gravitational wave signals from binary black hole mergers
+using the `IMRPhenomXP` waveform model.
+
+Key Tasks:
+* Instantiate a bilby.gw.WaveformGenerator with the source model:
+  `frequency_domain_source_model = bilby.gw.source.lal_binary_black_hole`
+* Use waveform arguments:
+  ```
+  waveform_arguments = {
+    'waveform_approximant': 'IMRPhenomXP',
+    'reference_frequency': 100.0,
+    'catch_waveform_errors': True
+  }
+  ```
+* Set the parameter conversion function:
+  `parameter_conversion = convert_to_lal_binary_black_hole_parameters`.
+* Attach additional attributes to the generator object:
+  ```
+  g.duration = duration
+  g.sampling_frequency = sampling_frequency
+  g.start_time = start_time
+  ```
+
+Most of these are provided in the "Create a likelihood" section in
+`demo/tutorial.ipynb`, except the last one, which is our "hack" to
+make our own MCMC code work.
+
+You can check your implementation by plotting the waveform in the
+visualization notebook `demo/vis.ipynb`.
+
+
 ## Additional Notes
 
 * **Collaboration**:
