@@ -114,6 +114,49 @@ You can check your implementation by plotting the waveform in the
 visualization notebook `demo/vis.ipynb`.
 
 
+### **Assignment 3**: MCMC Sampler (2 points)
+
+In this assignment, you'll implement a simple Metropolis-Hastings MCMC
+sampler for exploring the posterior distribution of gravitational wave
+parameters.
+Your task is to modify the the function implement in
+[lecture 20](https://ua-2025q1-phys305.github.io/20/notes.html)
+`mcmc_sampler(likelihood, prior, widths=[0.1, 0.01], n_steps=1000)`
+so it works for LIGO data.
+Inputs:
+* `likelihood`: A `bilby` likelihood object evaluating the gravitational wave signal match
+* `prior`: A PriorDict used to sample and evaluate prior probability
+* `widths`: A list of standard deviations for proposing new values of chirp_mass and mass_ratio (default: `[0.1, 0.01]`)
+* `n_steps`: Number of accepted MCMC steps to collect (default: `1000`)
+
+Key Tasks:
+* Initialize parameters by sampling from the prior
+* Evaluate the initial log posterior:
+  ```
+  likelihood.parameters = ...
+  log_post = likelihood.log_likelihood() + prior.ln_prob(parameters)
+* In a loop:
+  * Propose new values for chirp_mass and mass_ratio using Gaussian
+    perturbation
+  * Construct a proposed parameter dictionary
+  * Evaluate the new log posterior using the proposed parameters
+  * Use the Metropolis-Hastings criterion to accept or reject:
+    `acceptance_prob = np.exp(log_post_proposed - log_post)`
+  * If accepted, update the current state and store the sample.
+* Stop when n_steps accepted samples are collected
+* Print the sampling efficiency
+
+Expected Output:
+* A progress bar indicating MCMC progress
+* An efficiency message at the end
+* Reasonable posterior samples that can be visualized with a corner
+  plot in the next assignment
+
+You can check your implementation by running your `mcmc_sampler()` in
+the visualization notebook `demo/vis.ipynb`.
+
+
+
 ## Additional Notes
 
 * **Collaboration**:
