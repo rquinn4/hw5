@@ -3,9 +3,9 @@
 Welcome to the repository for **Homework Set #5** in PHYS305.
 This homework set is worth **10 points** and is designed to test your
 understanding of topics that we've covered.
-The submission cutoff time is at **Tuesday Apr 17th, 11:59pm** Arizona
+The submission cutoff time is at **Tuesday Apr 22nd, 11:59pm** Arizona
 time.
-Please use [this link](https://classroom.github.com/a/______) to
+Please use [this link](https://classroom.github.com/a/9xgqBYqm) to
 accept it from GitHub Classroom.
 
 
@@ -186,7 +186,7 @@ How to Test It:
 * The debug notebook will run your `stat()` function after sampling.
 
 
-### Assignment 5: Full Gravitational Wave Inference Pipeline (5 points)
+### Assignment 5: Full Gravitational Wave Inference Pipeline (2 points)
 
 In this final assignment, you will bring everything together into a
 full gravitational wave parameter inference pipeline.
@@ -204,8 +204,8 @@ Key Tasks:
   notebook `demo/vis.ipynb`!
   This means you are just copying and rearranging a Jupyter Notebook
   into a script.
-* The make the script executable, wrap the call in a `__main__` block
-  so students can run it from the command line:
+* To make the script executable, wrap the call in a `__main__` block
+  so you can run it from the command line:
   ```
   if __name__ == "__main__":
     main(1126259462.4)
