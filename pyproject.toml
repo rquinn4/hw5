@@ -8,5 +8,6 @@ dependencies = [
     "tqdm",
     "bilby",
     "gwpy",
+    "lalsuite",
     "pytest",
 ]
