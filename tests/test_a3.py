@@ -2,6 +2,7 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 from phys305_hw5 import *
+from bilby.core.prior import Uniform, PowerLaw
 import numpy as np
 import pytest
 
