@@ -1,5 +1,4 @@
-
-from src import 
+from phys305_hw5 import Interferometer
 import bilby
 import numpy as np
 import pytest
