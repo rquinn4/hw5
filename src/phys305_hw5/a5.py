@@ -2,8 +2,10 @@
 import numpy as np
 import bilby
 from bilby.core.prior import PriorDict
-
-from phys305_hw5 import Interferometer, WaveformGenerator, mcmc_sampler, stat
+from a1 import Interferometer
+from a2 import WaveformGenerator
+from a3 import mcmc_sampler
+from a4 import stat
 
 def main(time_of_event):
     ifo = Interferometer("H1", time_of_event)
